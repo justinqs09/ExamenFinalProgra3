@@ -1,0 +1,44 @@
+﻿@model ExamenFinalProgra3.Models.Empleado
+
+<h2>Agregar Nuevo Empleado</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Id">Carnet único:</label>
+        <input type="number" id="Id" name="Id" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="NombreCompleto">Nombre completo:</label>
+        <input type="text" id="NombreCompleto" name="NombreCompleto" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="FechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="FechaNacimiento" name="FechaNacimiento" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Direccion">Dirección:</label>
+        <input type="text" id="Direccion" name="Direccion" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Telefono">Teléfono:</label>
+        <input type="text" id="Telefono" name="Telefono" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="CorreoElectronico">Correo electrónico:</label>
+        <input type="email" id="CorreoElectronico" name="CorreoElectronico" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Salario">Salario:</label>
+        <input type="number" id="Salario" name="Salario" class="form-control" />
+        <small class="form-text text-muted">Si no se especifica, se asignará automáticamente un salario mínimo de 250,000.</small>
+    </div>
+    <div class="form-group">
+        <label for="CategoriaLaboral">Categoría laboral:</label>
+        <select id="CategoriaLaboral" name="CategoriaLaboral" class="form-control" required>
+            <option value="Administrador">Administrador</option>
+            <option value="Operario">Operario</option>
+            <option value="Peón">Peón</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Empleado</button>
+</form>

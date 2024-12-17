@@ -1,0 +1,19 @@
+﻿@model ExamenFinalProgra3.Models.Proyecto
+
+<h2>Crear Nuevo Proyecto</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre del Proyecto:</label>
+        <input type="text" id="Nombre" name="Nombre" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="FechaInicio">Fecha de Inicio:</label>
+        <input type="date" id="FechaInicio" name="FechaInicio" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="FechaFinalizacion">Fecha de Finalización (Opcional):</label>
+        <input type="date" id="FechaFinalizacion" name="FechaFinalizacion" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+</form>

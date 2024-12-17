@@ -1,0 +1,36 @@
+﻿@model ExamenFinalProgra3.Models.AsignacionDeProyecto
+
+@{
+    ViewData["Title"] = "Asignar Empleado a Proyecto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Asignar" method="post">
+    <div class="form-group">
+        <label for="EmpleadoId">Empleado</label>
+        <select id="EmpleadoId" name="empleadoId" class="form-control">
+            @foreach (var empleado in ViewBag.Empleados)
+            {
+                <option value="@empleado.Id">@empleado.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="ProyectoId">Proyecto</label>
+        <select id="ProyectoId" name="proyectoId" class="form-control">
+            @foreach (var proyecto in ViewBag.Proyectos)
+            {
+                <option value="@proyecto.Id">@proyecto.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="FechaAsignacion">Fecha de Asignación</label>
+        <input type="date" id="FechaAsignacion" name="fechaAsignacion" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Asignar</button>
+</form>

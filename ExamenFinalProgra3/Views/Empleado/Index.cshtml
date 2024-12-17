@@ -1,0 +1,29 @@
+﻿@model List<ExamenFinalProgra3.Models.Empleado>  // Usa el namespace de tu proyecto
+
+<h2>Lista de Empleados</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Carnet único</th>
+            <th>Nombre completo</th>
+            <th>Fecha de nacimiento</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo electrónico</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in Model)
+        {
+            <tr>
+                <td>@empleado.Id</td>
+                <td>@empleado.NombreCompleto</td>
+                <td>@empleado.FechaNacimiento.ToShortDateString()</td>
+                <td>@empleado.Direccion</td>
+                <td>@empleado.Telefono</td>
+                <td>@empleado.CorreoElectronico</td>
+            </tr>
+        }
+    </tbody>
+</table>

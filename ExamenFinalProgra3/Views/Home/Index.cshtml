@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Constructora UH"] - ExamenFinalProgra3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">ExamenFinalProgra3</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Empleado" asp-action="Crear">Agregar Empleado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Empleado" asp-action="Index">Ver Empleados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Proyecto" asp-action="Crear">Crear Proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Proyecto" asp-action="Index">Ver Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Asignacion" asp-action="Asignar">Asignar Empleado a Proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Asignacion" asp-action="VerAsignaciones">Ver Asignaciones</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h2>Bienvenido a la Página Principal</h2>
+        <p>Desde aquí puedes acceder al formulario para agregar empleados o ver la lista de empleados.</p>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 - ExamenFinalProgra3</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Ver Asignaciones";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Empleado</th>
+            <th>Proyecto</th>
+            <th>Fecha de Asignación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var asignacion in Model)
+        {
+            <tr>
+                <td>@asignacion.Id</td>
+                <td>@asignacion.Empleado</td>
+                <td>@asignacion.Proyecto</td>
+                <td>@asignacion.FechaAsignacion.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

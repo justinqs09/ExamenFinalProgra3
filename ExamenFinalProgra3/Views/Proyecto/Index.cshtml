@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ExamenFinalProgra3.Models.Proyecto>
+
+@{
+    ViewData["Title"] = "Lista de Proyectos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Finalización</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proyecto in Model)
+        {
+            <tr>
+                <td>@proyecto.Id</td>
+                <td>@proyecto.Nombre</td>
+                <td>@proyecto.FechaInicio.ToString("dd/MM/yyyy")</td>
+                <td>
+                    @if (proyecto.FechaFinalizacion.HasValue)
+                    {
+                        @proyecto.FechaFinalizacion.Value.ToString("dd/MM/yyyy")
+                    }
+                    else
+                    {
+                        <span>No finalizado</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
